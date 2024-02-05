@@ -1,0 +1,16 @@
+{
+  "name": "mdx.nvim",
+  "private": true,
+  "packageManager": "yarn@3.5.0",
+  "devDependencies": {
+    "@commitlint/config-conventional": "^17.6.1",
+    "commitlint": "latest",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
+    "cspell": "^6.31.1",
+    "husky": "^8.0.3"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "lint:commit": "commitlint --config commitlint.config.js"
+  }
+}
