@@ -5,7 +5,7 @@ function M.setup()
     vim.filetype.add({ extension = { mdx = "mdx" } })
 
     -- Configure treesitter to use the markdown parser for mdx files
-    require("nvim-treesitter.parsers").filetype_to_parsername.mdx = "markdown"
+    vim.treesitter.language.register("markdown", "mdx")
 end
 
 return M
