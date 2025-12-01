@@ -16,6 +16,18 @@ Highlight support for mdx based in [the post] written by [Phelipe Teles].
 }
 ```
 
+#### With [vim-plug]
+
+```vim
+Plug 'davidmh/mdx.nvim'
+```
+
+Then add this after `call plug#end()`:
+
+```vim
+lua require("mdx").setup()
+```
+
 #### With [NvChad]
 
 From the NvChad [docs]:
@@ -31,5 +43,6 @@ But if you absolutely need to loaded only when needed, you can use `event = "Buf
 [the post]: https://phelipetls.github.io/posts/mdx-syntax-highlight-treesitter-nvim/
 [Phelipe Teles]: https://github.com/phelipetls
 [lazy.nvim]: https://github.com/folke/lazy.nvim
+[vim-plug]: https://github.com/junegunn/vim-plug
 [NvChad]: https://github.com/NvChad/NvChad
 [docs]: https://nvchad.com/docs/config/plugins
