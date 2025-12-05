@@ -11,21 +11,17 @@ Highlight support for mdx based in [the post] written by [Phelipe Teles].
 ```lua
 {
   "davidmh/mdx.nvim",
-  config = true,
   dependencies = {"nvim-treesitter/nvim-treesitter"}
 }
 ```
 
+Note that we don't need to call `config` or define `opts`.
+
 #### With [vim-plug]
 
 ```vim
+Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'davidmh/mdx.nvim'
-```
-
-Then add this after `call plug#end()`:
-
-```vim
-lua require("mdx").setup()
 ```
 
 #### With [NvChad]
