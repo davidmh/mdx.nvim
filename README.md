@@ -17,6 +17,12 @@ Highlight support for mdx based in [the post] written by [Phelipe Teles].
 
 Note that we don't need to call `config` or define `opts`.
 
+Then install the parser for `mdx` with `:TSInstall mdx` or define somewhere in your config as:
+
+```lua
+require'nvim-treesitter'.install { 'mdx' }
+```
+
 #### With [vim-plug]
 
 ```vim
