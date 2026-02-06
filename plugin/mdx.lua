@@ -17,6 +17,19 @@ if ok then
     },
     filetype = "mdx"
   }
+
+  local install_available, install = pcall(require, "nvim-treesitter.install")
+  if install_available then
+    -- The legacy branch (master) in nvim-treesitter provides the installer through a
+    -- dedicated module
+    install.ensure_installed { "mdx" }
+  else
+    -- The default branch (main) exposes an install method from the default module
+    local ok, new_api = pcall(require, 'nvim-treesitter')
+    if ok then
+      new_api.install { "mdx" }
+    end
+  end
 else
   vim.cmd.echom "mdx.nvim depends on nvim-treesitter.vim"
 end
