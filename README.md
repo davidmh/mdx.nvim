@@ -17,6 +17,19 @@ Highlight support for mdx based in [the post] written by [Phelipe Teles].
 
 Note that we don't need to call `config` or define `opts`.
 
+If for some reason treesitter doesn't correctly start for you, try adding this config function.
+
+```lua
+  config = function()
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "mdx",
+      callback = function()
+        vim.treesitter.start()
+      end
+    })
+  end
+```
+
 #### With [vim-plug]
 
 ```vim
