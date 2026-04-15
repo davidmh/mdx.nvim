@@ -15,7 +15,23 @@ Highlight support for mdx based in [the post] written by [Phelipe Teles].
 }
 ```
 
-Note that we don't need to call `config` or define `opts`.
+## Testing
+
+To test the plugin with a minimal configuration:
+
+```bash
+# Run the setup script to install plugins and parsers
+./setup-minimal-config
+
+# Open the test file
+nvim -u minimal-init.lua test.mdx
+```
+
+This will:
+1. Install lazy.nvim, nvim-treesitter and mdx.nvim
+2. Install treesitter parsers for markdown, tsx, and typescript
+
+The test file `test.mdx` contains example MDX code to verify syntax highlighting works correctly.
 
 #### With [vim-plug]
 

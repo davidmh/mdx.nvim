@@ -1,0 +1,38 @@
+# Test MDX
+
+export const SingleLine = ({ x }) => ( <span>{x}</span> );
+
+export const MultiLineTabs = () => {
+	return (
+		<div className="wrapper">
+			<span>hello world</span>
+			{something}
+		</div>
+	)
+};
+
+
+export const MultiLineSpaces = () => {
+  /* Comments work */
+  return (
+    <div className="wrapper">
+      <span>hello world</span>
+      {something}
+    </div>
+  )
+};
+
+export const MultiLineSpaces = () => (
+  <div className="wrapper">
+    <span>hello world</span>
+    {something}
+  </div>
+);
+
+export const Fragment = () => (
+  // This is a comment
+  <>
+    <div>this works</div>
+    {cool}
+  </>
+)

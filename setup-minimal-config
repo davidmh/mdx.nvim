@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -e
+
+SCRIPT_DIR="$(dirname "$0")"
+INIT_FILE="$SCRIPT_DIR/minimal-init.lua"
+
+echo "Installing plugins and parsers..."
+nvim --headless -u "$INIT_FILE" +qa
+
+echo ""
+echo "Done! You can now open the test file with:"
+echo "  nvim -u $INIT_FILE test.mdx"
