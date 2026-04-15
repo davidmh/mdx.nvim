@@ -19,3 +19,7 @@
   (#lua-match? @injection.content "^%s*<")
   (#set! injection.language "typescriptreact")
   (#set! injection.include-children))
+
+((html_block) @injection.content
+  (#set! injection.language "typescriptreact")
+  (#set! injection.include-children))
